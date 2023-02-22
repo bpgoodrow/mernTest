@@ -10,7 +10,7 @@ const cors = require("cors");
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect("mongodb+srv://bpgoodrow:3520IonMB23%21%40@testcluster.nkehzom.mongodb.net/mernTest?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://<username>:<password>@testcluster.nkehzom.mongodb.net/mernTest?retryWrites=true&w=majority");
 
 app.get("/getUser", (req, res) => {
   UserModel.find({}, (err, result) => {
